@@ -23,6 +23,7 @@ HTTP:  http://localhost:8545
 To add pre-filled accounts edit the accounts key in the file parity/config/parity.json \
  - For syntax and advanced usage see: [Parity Chain Specification](https://wiki.parity.io/Chain-specification)
 
+
 ## Developing
 
 Now that you have done sucessfully the prerequisites steps (yay!), it's time to get your hands dirty. Just make sure you have installed `docker` and `docker-compose` (the more recent, the better).
