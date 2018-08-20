@@ -2,7 +2,7 @@
 Simple docker-compose setup for development use.  Allows interacting with a private local Ethereum node via http or https
 
 ## Project Structure
-                                                                                                                                                                                                                                                      
+
 Also, there are a couple of different directories:
 
 | Directory               | Written in          | Purpose                                                                                                                                                                                                                                    |
@@ -15,7 +15,9 @@ Also, there are a couple of different directories:
 
 These instructions will get you a copy of a Parity Ethereum node up and running on your local machine for development and testing puposes.
 
-Otherwise, if you have already cloned it without specifying --recursive flag, just issue the following in the terminal:
+#### Endpoints:
+HTTPS: https://localhost:7545
+HTTP:  http://localhost:8545
 
 ## Developing
 
