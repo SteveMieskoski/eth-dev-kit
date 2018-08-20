@@ -16,7 +16,7 @@ Also, there are a couple of different directories:
 These instructions will get you a copy of a Parity Ethereum node up and running on your local machine for development and testing puposes.
 
 #### Endpoints:
-HTTPS: https://localhost:7545
+HTTPS: https://localhost:7545 \
 HTTP:  http://localhost:8545
 
 #### Config:
