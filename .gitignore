@@ -9,3 +9,5 @@ out
 gen
 
 /geth/
+config/nginx/nginx_old.conf
+node_modules/

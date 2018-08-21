@@ -1,7 +1,5 @@
 version: '3.6'
 
-networks:
-  network1:
 
 services:
 
@@ -12,21 +10,21 @@ services:
       - /home/steve/mew/MewLabs/eth-dev-kit/config/certs/devCert.cert:/etc/nginx/devCert.cert:ro
       - /home/steve/mew/MewLabs/eth-dev-kit/config/certs/devCert.key:/etc/nginx/devCert.key:ro
     ports:
-      - 7545:7545
+      # Ethereum Specific
+      # JSON RPC
+      - 7545:7545 # SSL
       - 8545:8545
-    networks:
-      - network1
+      # WebSockets
+      - 7546:7546 # SSL
+      - 8546:8546
 
   parity:
     image: parity/parity:v1.11.8
     volumes:
       - /home/steve/mew/MewLabs/eth-dev-kit/parity/config/:/config
-    networks:
-      - network1
     ports:
-      - 8546:8546
       - 8180:8180
       - 30303:30303/udp
     command: >
-      --chain /config/genesis.json --ui-interface all --jsonrpc-interface all --jsonrpc-cors *
+       --config /config/config.toml
 
