@@ -19,7 +19,13 @@ These instructions will get you a copy of a Parity Ethereum node up and running 
 HTTPS: https://localhost:7545 \
 HTTP:  http://localhost:8545
 
+WSS: https://localhost:7545 \
+WS:  http://localhost:8545
+
 #### Config:
+To configure Parity edit the file parity/config/config.toml
+ - For syntax and advanced usage see: [Configuring Parity](https://wiki.parity.io/Configuring-Parity-Ethereum)
+
 To add pre-filled accounts edit the accounts key in the file parity/config/genesis.json
  - For syntax and advanced usage see: [Parity Chain Specification](https://wiki.parity.io/Chain-specification)
 
