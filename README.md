@@ -20,7 +20,7 @@ HTTPS: https://localhost:7545 \
 HTTP:  http://localhost:8545
 
 #### Config:
-To add pre-filled accounts edit the accounts key in the file parity/config/parity.json
+To add pre-filled accounts edit the accounts key in the file parity/config/genesis.json
  - For syntax and advanced usage see: [Parity Chain Specification](https://wiki.parity.io/Chain-specification)
 
 
