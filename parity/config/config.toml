@@ -15,7 +15,7 @@ hosts = ["none"]
 [websockets]
 disable = false
 port = 8546
-interface = "all"
+#interface = "all"
 origins = ["all"]
 apis = ["web3", "eth", "pubsub", "net", "parity", "parity_pubsub", "traces", "rpc", "shh", "shh_pubsub"]
 
