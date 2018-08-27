@@ -1,5 +1,7 @@
 version: '3.6'
 
+networks:
+  network1:
 
 services:
 
@@ -20,6 +22,8 @@ services:
 
   parity:
     image: parity/parity:v1.11.8
+    depends_on:
+          - nginx
     volumes:
       - /home/steve/mew/MewLabs/eth-dev-kit/parity/config/:/config
     ports:

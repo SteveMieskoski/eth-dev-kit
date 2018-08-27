@@ -2,7 +2,8 @@
   "name": "eth-dev-kit",
   "version": "0.0.1",
   "scripts": {
-    "monkey": "ts-node bin/monkey-cli.ts"
+    "monkey": "ts-node bin/monkey-cli.ts",
+    "tokenDeploy": "ts-node bin/monkey-cli.ts deploy"
   },
   "devDependencies": {
     "@enkrypt.io/json-rpc2": "^1.0.2",
@@ -27,6 +28,7 @@
   },
   "dependencies": {
     "ethereumjs-abi": "^0.6.5",
-    "ethereumjs-util": "^5.2.0"
+    "ethereumjs-util": "^5.2.0",
+    "web3": "^1.0.0-beta.35"
   }
 }
