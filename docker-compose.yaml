@@ -1,16 +1,28 @@
 version: '3.6'
 
-networks:
-  network1:
+#networks:
+#  network1:
 
 services:
 
+  parity:
+    image: parity/parity:v1.11.10
+    volumes:
+      - /home/steve/mew/MewLabs/eth-dev-kit/parity/config/:/config
+    ports:
+      - 8180:8180
+      - 30303:30303/udp
+    command: >
+       --config /config/config.toml
+
   nginx:
     image: nginx:1.15-alpine
+    depends_on:
+          - parity
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - /home/steve/mew/MewLabs/eth-dev-kit/config/certs/devCert.cert:/etc/nginx/devCert.cert:ro
-      - /home/steve/mew/MewLabs/eth-dev-kit/config/certs/devCert.key:/etc/nginx/devCert.key:ro
+      - ./config/certs/devCerts/devssl.crt:/etc/nginx/devssl.crt:ro
+      - ./config/certs/devCertsPrivate/devssl.key:/etc/nginx/devssl.key:ro
     ports:
       # Ethereum Specific
       # JSON RPC
@@ -19,16 +31,4 @@ services:
       # WebSockets
       - 7546:7546 # SSL
       - 8546:8546
-
-  parity:
-    image: parity/parity:v1.11.8
-    depends_on:
-          - nginx
-    volumes:
-      - /home/steve/mew/MewLabs/eth-dev-kit/parity/config/:/config
-    ports:
-      - 8180:8180
-      - 30303:30303/udp
-    command: >
-       --config /config/config.toml
 
